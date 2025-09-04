@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Activities</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: white;
+      display: flex;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 220px;
+      background: #1a1a1a;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .sidebar img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%; /* makes the logo circular */
+      border: 3px solid #00c6ff; /* optional nice border */
+      object-fit: cover; /* keeps image ratio inside circle */
+      margin-bottom: 20px;
+    }
+
+    .sidebar a {
+      color: #ccc;
+      text-decoration: none;
+      margin: 15px 0;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+      color: #00c6ff;
+    }
+
+    /* Main content */
+    .main {
+      margin-left: 240px; /* push content beside sidebar */
+      padding: 40px;
+      flex: 1;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 5px;
+    }
+
+    p {
+      color: #bbb;
+      margin-bottom: 40px;
+    }
+
+    /* Activities grid */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+    }
+
+    .card {
+      background: #1a1a1a;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      background: #222;
+    }
+
+    .card h3 {
+      margin-bottom: 15px;
+    }
+
+    /* Button */
+    .card a {
+      display: inline-block;
+      padding: 12px 25px;
+      background: linear-gradient(90deg, #0072ff, #00c6ff);
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 25px;
+      transition: 0.3s;
+    }
+
+    .card a:hover {
+      opacity: 0.85;
+    }
+  </style>
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <img src="logo1.png" alt="Logo"> <!-- Replace with your logo -->
+    <a href="#">Home</a>
+    <a href="#">Projects</a>
+    <a href="#">Contact</a>
+  </div>
+
+  <!-- Main content -->
+  <div class="main">
+    <h1>ACTIVITIES</h1>
+    <p>Embedded Systems 2</p>
+
+    <div class="cards">
+      <div class="card">
+        <h3>ACTIVITY - 1.1</h3>
+        <a href="https://webpage2004.netlify.app">View Project</a>
+      </div>
+
+      <div class="card">
+        <h3>ACTIVITY - 1.2</h3>
+        <a href="https://education2625.netlify.app">View Project</a>
+      </div>
+
+      <div class="card">
+        <h3>ACTIVITY - 2.1</h3>
+        <a href="https://resume200426.netlify.app">View Project</a>
+      </div>
+
+      <div class="card">
+        <h3>ACTIVITY - 2.2</h3>
+        <a href="https://schedule2004.netlify.app">View Project</a>
+      </div>
+
+      <div class="card">
+        <h3>ACTIVITY - 2.3</h3>
+        <a href="https://portal2004.netlify.app">View Project</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
