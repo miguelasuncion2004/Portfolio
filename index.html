@@ -3,149 +3,86 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio Activities</title>
+  <title>Contact Me</title>
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #111;
-      color: white;
+      background: #0f0f0f;
+      color: #fff;
       display: flex;
-    }
-
-    /* Sidebar */
-    .sidebar {
-      width: 220px;
-      background: #1a1a1a;
-      height: 100vh;
-      position: fixed;
-      top: 0;
-      left: 0;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
+      justify-content: center;
       align-items: center;
+      height: 100vh;
     }
 
-    .sidebar img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%; /* makes the logo circular */
-      border: 3px solid #00c6ff; /* optional nice border */
-      object-fit: cover; /* keeps image ratio inside circle */
-      margin-bottom: 20px;
-    }
-
-    .sidebar a {
-      color: #ccc;
-      text-decoration: none;
-      margin: 15px 0;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .sidebar a:hover {
-      color: #00c6ff;
-    }
-
-    /* Main content */
-    .main {
-      margin-left: 240px; /* push content beside sidebar */
-      padding: 40px;
-      flex: 1;
+    .contact-container {
+      background: #1a1a1a;
+      padding: 30px;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 500px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     }
 
     h1 {
-      font-size: 2rem;
-      margin-bottom: 5px;
-    }
-
-    p {
-      color: #bbb;
-      margin-bottom: 40px;
-    }
-
-    /* Activities grid */
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 20px;
-      max-width: 1000px;
-    }
-
-    .card {
-      background: #1a1a1a;
-      border-radius: 12px;
-      padding: 20px;
       text-align: center;
-      transition: 0.3s;
+      margin-bottom: 20px;
     }
 
-    .card:hover {
-      background: #222;
+    label {
+      display: block;
+      margin: 10px 0 5px;
     }
 
-    .card h3 {
+    input, textarea {
+      width: 100%;
+      padding: 10px;
       margin-bottom: 15px;
+      border: none;
+      border-radius: 8px;
+      background: #2a2a2a;
+      color: white;
+      font-size: 1rem;
     }
 
-    /* Button */
-    .card a {
-      display: inline-block;
-      padding: 12px 25px;
+    input:focus, textarea:focus {
+      outline: 2px solid #00c6ff;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
       background: linear-gradient(90deg, #0072ff, #00c6ff);
       color: white;
-      text-decoration: none;
       font-weight: bold;
+      border: none;
       border-radius: 25px;
+      font-size: 1rem;
+      cursor: pointer;
       transition: 0.3s;
     }
 
-    .card a:hover {
-      opacity: 0.85;
+    button:hover {
+      opacity: 0.8;
     }
   </style>
 </head>
 <body>
-  <!-- Sidebar -->
-  <div class="sidebar">
-    <img src="logo1.png" alt="Logo"> <!-- Replace with your logo -->
-    <a href="#">Home</a>
-    <a href="#">Projects</a>
-    <a href="#">Contact</a>
-  </div>
+  <div class="contact-container">
+    <h1>Contact Me</h1>
+    <form action="mailto:your-email@example.com" method="POST" enctype="text/plain">
+      <label for="name">Miguel A. Perez</label>
+      <input type="text" id="name" name="name" required>
 
-  <!-- Main content -->
-  <div class="main">
-    <h1>ACTIVITIES</h1>
-    <p>Embedded Systems 2</p>
+      <label for="email">s.miguel.perez@sscr.edu</label>
+      <input type="email" id="email" name="email" required>
 
-    <div class="cards">
-      <div class="card">
-        <h3>ACTIVITY - 1.1</h3>
-        <a href="https://webpage2004.netlify.app">View Project</a>
-      </div>
+      <label for="message">San Sebastian College Recoletos de Cavite</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
 
-      <div class="card">
-        <h3>ACTIVITY - 1.2</h3>
-        <a href="https://education2625.netlify.app">View Project</a>
-      </div>
-
-      <div class="card">
-        <h3>ACTIVITY - 2.1</h3>
-        <a href="https://resume200426.netlify.app">View Project</a>
-      </div>
-
-      <div class="card">
-        <h3>ACTIVITY - 2.2</h3>
-        <a href="https://schedule2004.netlify.app">View Project</a>
-      </div>
-
-      <div class="card">
-        <h3>ACTIVITY - 2.3</h3>
-        <a href="https://portal2004.netlify.app">View Project</a>
-      </div>
-    </div>
+      <button type="submit">Send Message</button>
+    </form>
   </div>
 </body>
 </html>
